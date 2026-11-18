@@ -7,12 +7,15 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
+/// <summary>
+/// Inventory System with Inheritance.
+/// </summary>
 public class InventorySystem : MonoBehaviour
 {
     public bool onInventory = false; //Toggle inventory UI
     
 
-    [SerializeField] private bool cursorLock = true; // Toggle mouse lock
+    [SerializeField] private bool cursorLock = true; // Toggle mouse lock.
     [SerializeField] private GameObject inventoryUI;
 
     private void Awake()
@@ -61,21 +64,16 @@ public class InventorySystem : MonoBehaviour
         } // Pressing G locks mouse.
     }
 
-    public void toInventory() //toggle inventory //re-usable for toggle systems
-    {
-        
-
-
-    }
 }
 
 
 
 
 
-
+/*
 public class InventorySpawner : InventorySystem
 {
     [SerializeField] private InventorySystem inventorySystem;
 
 }
+*/

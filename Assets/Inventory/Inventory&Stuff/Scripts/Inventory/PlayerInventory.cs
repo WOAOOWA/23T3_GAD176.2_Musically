@@ -18,13 +18,13 @@ public class PlayerInventory : MonoBehaviour
     [Header("Item gameobjects")]
     [SerializeField] GameObject oilLamp_item;
     [SerializeField] GameObject jukebox_item;
-    [SerializeField] GameObject potion_item;
+    [SerializeField] GameObject jbl_item;
 
     [Space(20)]
     [Header("Item prefabs")]
     [SerializeField] GameObject oilLamp_prefab;
     [SerializeField] GameObject jukebox_prefab;
-    [SerializeField] GameObject potion_prefab;
+    [SerializeField] GameObject jbl_prefab;
 
     [SerializeField] Camera cam;
     [SerializeField] GameObject pickUpItem_gameobject;
@@ -37,11 +37,11 @@ public class PlayerInventory : MonoBehaviour
     {
         itemSetActive.Add(itemType.OilLamp, oilLamp_item);
         itemSetActive.Add(itemType.Jukebox, jukebox_item);
-        itemSetActive.Add(itemType.Potion, potion_item);
+        itemSetActive.Add(itemType.JBL, jbl_item);
 
         itemInstantiate.Add(itemType.OilLamp, oilLamp_prefab);
         itemInstantiate.Add(itemType.Jukebox, jukebox_prefab);
-        itemInstantiate.Add(itemType.Potion, potion_prefab);
+        itemInstantiate.Add(itemType.JBL, jbl_prefab);
 
         NewItemSelected();
     }
@@ -138,7 +138,7 @@ public class PlayerInventory : MonoBehaviour
     {
         oilLamp_item.SetActive(false);
         jukebox_item.SetActive(false);
-        potion_item.SetActive(false);
+        jbl_item.SetActive(false);
 
         GameObject selectedItemGameobject = itemSetActive[inventoryList[selectedItem]]; //Shows the gameObject in game.
         selectedItemGameobject.SetActive(true);

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8798139601988428727}
   - component: {fileID: 4918281217684495646}
   m_Layer: 0
-  m_Name: Potion
+  m_Name: JBL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionDuration: 0
   lightSize: 0
-  item_type: 0
+  item_type: 2
   item_sprite: {fileID: 0}
 --- !u!54 &8798139601988428727
 Rigidbody:
