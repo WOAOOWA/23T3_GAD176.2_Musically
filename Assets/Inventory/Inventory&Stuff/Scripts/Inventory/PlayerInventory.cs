@@ -16,15 +16,15 @@ public class PlayerInventory : MonoBehaviour
 
     [Space(20)]
     [Header("Item gameobjects")]
-    [SerializeField] GameObject oilLamp_item;
-    [SerializeField] GameObject jukebox_item;
-    [SerializeField] GameObject jbl_item;
+    [SerializeField] GameObject Music_1;
+    [SerializeField] GameObject Music_2;
+    [SerializeField] GameObject Music_3;
 
     [Space(20)]
     [Header("Item prefabs")]
-    [SerializeField] GameObject oilLamp_prefab;
-    [SerializeField] GameObject jukebox_prefab;
-    [SerializeField] GameObject jbl_prefab;
+    [SerializeField] GameObject Music_1_prefab;
+    [SerializeField] GameObject Music_2_prefab;
+    [SerializeField] GameObject Music_3_prefab;
 
     [SerializeField] Camera cam;
     [SerializeField] GameObject pickUpItem_gameobject;
@@ -35,13 +35,13 @@ public class PlayerInventory : MonoBehaviour
 
     private void Start() //Set active in hierarchy.
     {
-        itemSetActive.Add(itemType.OilLamp, oilLamp_item);
-        itemSetActive.Add(itemType.Jukebox, jukebox_item);
-        itemSetActive.Add(itemType.JBL, jbl_item);
+        itemSetActive.Add(itemType.Music1, Music_1);
+        itemSetActive.Add(itemType.Music2, Music_2);
+        itemSetActive.Add(itemType.Music3, Music_3);
 
-        itemInstantiate.Add(itemType.OilLamp, oilLamp_prefab);
-        itemInstantiate.Add(itemType.Jukebox, jukebox_prefab);
-        itemInstantiate.Add(itemType.JBL, jbl_prefab);
+        itemInstantiate.Add(itemType.Music1, Music_1_prefab);
+        itemInstantiate.Add(itemType.Music2, Music_2_prefab);
+        itemInstantiate.Add(itemType.Music3, Music_3_prefab);
 
         NewItemSelected();
     }
@@ -136,9 +136,9 @@ public class PlayerInventory : MonoBehaviour
 
     private void NewItemSelected() //Hides all items.
     {
-        oilLamp_item.SetActive(false);
-        jukebox_item.SetActive(false);
-        jbl_item.SetActive(false);
+        Music_1.SetActive(false);
+        Music_3.SetActive(false);
+        Music_2.SetActive(false);
 
         GameObject selectedItemGameobject = itemSetActive[inventoryList[selectedItem]]; //Shows the gameObject in game.
         selectedItemGameobject.SetActive(true);

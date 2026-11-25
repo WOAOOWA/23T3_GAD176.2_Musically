@@ -11,4 +11,4 @@ public class ItemSystem : MonoBehaviour
     public Sprite item_sprite;
 
 }
-public enum itemType { OilLamp, Jukebox, JBL };
+public enum itemType { Music1, Music3, Music2 };
